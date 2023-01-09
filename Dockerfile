@@ -35,6 +35,6 @@ ENV APP_PORT=$APP_PORT
 
 # Run Program
 WORKDIR /app/
-COPY --from=build /aline-transaction-microservice/transaction-microservice/target/transaction-microservice-0.1.0.jar transaction_jar
+COPY --from=build /aline-transaction-microservice/transaction-microservice/target/transaction-microservice-*.jar transaction_jar
 EXPOSE ${APP_PORT}
 CMD java -jar transaction_jar
